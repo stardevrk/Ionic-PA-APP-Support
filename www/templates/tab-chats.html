@@ -12,19 +12,21 @@
         </ion-option-button>
       </ion-item>
     </ion-list> -->
-    
-      <ion-slide-box class="row-slide-box" show-pager="false" does-continue="true" on-slide-changed="slideHasChanged($index)" delegate-handle="slidebox1">
-        <ion-slide ng-repeat="video in videos">
+    <div class="slide-wrapper" >
+      <!-- <ion-slide-box class="row-slide-box" show-pager="false" does-continue="true" on-slide-changed="slideHasChanged($index)" delegate-handle="$index" ng-init="parentIndex=$index" ng-repeat="videoSession in videos">
+        <ion-slide ng-repeat="video in videoSession.videoSession">
           <div class="slide-item">
             <img ng-src="{{video.video_info.thumbnail}}" class="slide-img">
-            <button style="font-size:15px;" class="button-swiper-prev" ng-click="previous('slidebox1')">Prev</button>
-            <button style="font-size:15px;" class="button-swiper-next" ng-click="next('slidebox1')">Next</button>
+            <button style="font-size:15px;" class="button-swiper-prev" ng-click="previous($parent.$index)">Prev</button>
+            <button style="font-size:15px;" class="button-swiper-next" ng-click="next($parent.$index)">Next</button>
           </div>
-          
         </ion-slide>
-      </ion-slide-box>
+      </ion-slide-box> -->
+    </div>
+    <video-session-slider videos="videos"></video-session-slider>
+      
 
-      <ion-slide-box class="row-slide-box" show-pager="false" does-continue="true" on-slide-changed="slideHasChanged($index)" delegate-handle="slidebox2">
+      <!-- <ion-slide-box class="row-slide-box" show-pager="false" does-continue="true" on-slide-changed="slideHasChanged($index)" delegate-handle="slidebox2">
         <ion-slide ng-repeat="video in videos">
           <div class="slide-item">
             <img ng-src="{{video.video_info.thumbnail}}" class="slide-img">
@@ -44,7 +46,7 @@
           </div>
           
         </ion-slide>
-      </ion-slide-box>
+      </ion-slide-box> -->
       
     
   </ion-content>
