@@ -1,0 +1,16 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <div class='myGrid'>
+      <div class="col-list">
+        <div class="col-item" ng-repeat="video in videos">
+          <img ng-if="$index % 2 == 0" class="col-img" src={{video.video_info.thumbnail}} />
+        </div>
+      </div>
+      <div class="col-list">
+        <div class="col-item" ng-repeat="video in videos">
+          <img ng-if="$index % 2 == 1" class="col-img" src={{video.video_info.thumbnail}} />
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
